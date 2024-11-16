@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/formatSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/spinner_background"
+        android:entries="@array/format_options"
+        android:padding="8dp"
+        android:popupBackground="@drawable/spinner_dropdown_background"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/formatSpinner"
+        app:layout_constraintBottom_toTopOf="@id/addCompteButton"/>
+
+    <Button
+        android:id="@+id/addCompteButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Add Compte"
+        android:background="@color/colorAccent"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
